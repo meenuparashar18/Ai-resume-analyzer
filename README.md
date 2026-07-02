@@ -51,7 +51,7 @@ AI-Resume-Analyzer/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/AI-Resume-Analyzer.git
+https://github.com/meenuparashar18/Ai-resume-analyzer.git
 ```
 
 ### 2. Open the Project
