@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc ="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+</script>
+</head>
+
+<body>
+
+ 
+
+    <div class="bg-circle circle1"></div>
+    <div class="bg-circle circle2"></div>
+    <div class="bg-circle circle3"></div>
+
+    <div class="container">
+
+        
+
+        <nav>
+
+            <h2>
+                <i class="fa-solid fa-robot"></i>
+                AI Resume Analyzer
+            </h2>
+
+            <button id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </nav>
+
+
+      
+
+        <section class="hero">
+
+            <h1>
+                Improve Your Resume With AI
+            </h1>
+
+            <p>
+                Upload your resume and receive an AI-powered ATS score,
+                resume score, improvement suggestions, strengths,
+                weaknesses and interview tips instantly.
+            </p>
+
+        </section>
+
+
+    
+
+        <section class="upload-card">
+
+            <div class="upload-area" id="dropArea">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <h3>Upload Resume</h3>
+
+                <p>Drag & Drop PDF Here</p>
+
+                <span>or</span>
+
+                <label for="resumeInput" class="upload-btn">
+                    Choose File
+                </label>
+
+                <input
+                    type="file"
+                    id="resumeInput"
+                    accept=".pdf"
+                    hidden>
+
+            </div>
+
+            <div class="file-name" id="fileName">
+                No file selected
+            </div>
+
+            <button id="analyzeBtn">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Analyze Resume
+            </button>
+
+        </section>
+
+
+       
+
+        <section class="loading hidden" id="loading">
+
+            <div class="loader"></div>
+
+            <p>
+                AI is analyzing your resume...
+            </p>
+
+        </section>
+
+
+        
+
+        <section class="results hidden" id="resultSection">
+
+
+            
+
+            <div class="score-grid">
+
+                <div class="score-card">
+
+                    <h3>Resume Score</h3>
+
+                    <div class="circle">
+
+                        <span id="resumeScore">
+                            0
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="score-card">
+
+                    <h3>ATS Score</h3>
+
+                    <div class="circle">
+
+                        <span id="atsScore">
+                            0
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+          
+
+            <div class="analysis-grid">
+
+
+                <div class="card">
+
+                    <h3>
+                        <i class="fa-solid fa-star"></i>
+                        Strengths
+                    </h3>
+
+                    <ul id="strengthList"></ul>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        Weaknesses
+                    </h3>
+
+                    <ul id="weaknessList"></ul>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        <i class="fa-solid fa-code"></i>
+                        Skills Found
+                    </h3>
+
+                    <ul id="skillList"></ul>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        Missing Skills
+                    </h3>
+
+                    <ul id="missingSkillList"></ul>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        Suggestions
+                    </h3>
+
+                    <ul id="suggestionList"></ul>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>
+                        <i class="fa-solid fa-user-tie"></i>
+                        Interview Tips
+                    </h3>
+
+                    <ul id="tipList"></ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+       
+
+        <footer>
+
+            <p>
+                Made with ❤️ using HTML, CSS, JavaScript & Gemini AI
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
